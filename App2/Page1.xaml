@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Page1">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                <Frame BackgroundColor="#2196F3">
+                    <Label Text="Universidad Israel" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3">                    
+                    <Label x:Name="lblUsuario"  HorizontalTextAlignment="End" TextColor="White" FontSize="Subtitle"/>
+                </Frame>
+                <Label Text="Sistema de calificaciones" TextColor="Black" FontSize="Body" HorizontalTextAlignment="Center" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition  />
+                        <RowDefinition  />
+                        <RowDefinition />
+                        <RowDefinition  />
+                        <RowDefinition  />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nota seguimiento uno" Grid.Row="0" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="0" x:Name="txtSeguimientoUno" Placeholder="Ingrese nota seguimiento uno" Keyboard="Numeric" TextChanged="txtSeguimientoUno_TextChanged" MaxLength="5" PlaceholderColor="Olive" />
+
+                    <Label Text="Examen uno" Grid.Row="1" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="1" x:Name="txtExamenUno" Placeholder="Ingrese examen uno" Keyboard="Numeric" TextChanged="txtExamenUno_TextChanged"  MaxLength="5" PlaceholderColor="Olive" />
+
+                    <Label Text="Nota parcial uno" Grid.Row="2" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="2" x:Name="txtParcialUno"  Keyboard="Numeric" IsEnabled="False" />
+
+                    <Label Text="Nota seguimiento dos" Grid.Row="3" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="3" x:Name="txtSeguimientoDos" Placeholder="Ingrese nota seguimiento dos" Keyboard="Numeric" TextChanged="txtSeguimientoDos_TextChanged"  MaxLength="5"  PlaceholderColor="Olive" />
+
+                    <Label Text="Examen dos" Grid.Row="4" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="4" x:Name="txtExamenDos" Placeholder="Ingrese examen dos" Keyboard="Numeric" TextChanged="txtExamenDos_TextChanged"  MaxLength="5"  PlaceholderColor="Olive" />
+
+                    <Label Text="Nota parcial dos" Grid.Row="5" Grid.Column="0"  HorizontalOptions="Start" VerticalOptions="Start"></Label>
+                    <Entry Grid.Column="1" Grid.Row="5" x:Name="txtParcialDos"  Keyboard="Numeric" IsEnabled="False" />
+                </Grid>
+                <Button  x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
